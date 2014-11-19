@@ -12,7 +12,7 @@ define(['angular'], function (angular) {
             .checkbox()
         ;
 
-        $('.ui.form')
+        $('#log')
             .form({
                 user: {
                     identifier : 'user',
