@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="ui grid">
+        <div class="row" style="padding-top: 10%;">
+            <div class="ui five wide column">
+            </div>
+            <div class="ui six wide column">
+                <h2 class="ui header red"><i class="red sign in icon"></i> Inicio de Sesión</h2>
+
+                <form action="/login" method="post">
+                    <div class="ui form tertiary segment">
+                        <div class="field">
+                            <label>Usuario</label>
+                            <div class="ui left labeled icon input">
+                                <input type="text" ng-model="username" placeholder="ejemplo@ejemplo.com" name="user" id="user">
+                                <i class="user icon"></i>
+                                <div class="ui corner label">
+                                    <i class="asterisk icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Contraseña</label>
+                            <div class="ui left labeled icon input">
+                                <input type="password" name="password" ng-model="password">
+                                <i class="lock icon"></i>
+                                <div class="ui corner label">
+                                    <i class="asterisk icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="">
+                                <label>Recordar Contraseña</label>
+                            </div>
+                        </div>
+                        <div class="ui blue submit button" ng-click="doLogin()">Login</div>
+                        <input type="submit" value="login"/>
+                    </div>
+                </form>
+            </div>
+            <div class="ui five wide column">
+            </div>
+        </div>
+    </div>
+</div>

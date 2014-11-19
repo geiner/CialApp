@@ -1,0 +1,150 @@
+<div class="main">
+    <div class="page_container">
+        <div class="" id="immersive_slider">
+            <div class="container">
+                <div class="ui grid">
+                    <div class="row">
+                        <div class="ui four wide column" style="padding-top: 110px;">
+                            <div class="ui grid">
+                                <div class="row">
+                                    <div class="ui eight wide column" style="padding-top: 26px;padding-left: 28px;">
+                                        <p class="ui left header teal">¿A donde Vamos?</p>
+                                    </div>
+                                    <div class="ui eight wide column">
+                                        <img class="ui large right image" src="/assets/img/bus.png" id="bus" ng-mouseover="animacion_bus();">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ui form  teal inverted segment">
+                                <div class="field">
+                                    <label>Origen</label>
+
+                                    <div class="ui fluid selection dropdown">
+                                        <div class="text">Seleccione</div>
+                                        <i class="dropdown icon"></i>
+                                        <input type="hidden" name="gender" id="origen">
+
+                                        <div class="menu">
+                                            <div class="item" data-value="lima">Lima</div>
+                                            <div class="item" data-value="trujillo">Trujillo</div>
+                                            <div class="item" data-value="tumbes">Tumbes</div>
+                                            <div class="item" data-value="cuzco">Cuzco</div>
+                                            <div class="item" data-value="piura">Piura</div>
+                                            <div class="item" data-value="ica">Ica</div>
+                                            <div class="item" data-value="ayacucho">Ayacucho</div>
+                                            <div class="item" data-value="puno">Puno</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label>Destino</label>
+
+                                    <div class="ui fluid selection dropdown">
+                                        <div class="text">Seleccione</div>
+                                        <i class="dropdown icon"></i>
+                                        <input type="hidden" name="gender" id="destino">
+
+                                        <div class="menu">
+                                            <div class="item" data-value="lima">Lima</div>
+                                            <div class="item" data-value="trujillo">Trujillo</div>
+                                            <div class="item" data-value="tumbes">Tumbes</div>
+                                            <div class="item" data-value="cuzco">Cuzco</div>
+                                            <div class="item" data-value="piura">Piura</div>
+                                            <div class="item" data-value="ica">Ica</div>
+                                            <div class="item" data-value="ayacucho">Ayacucho</div>
+                                            <div class="item" data-value="puno">Puno</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label>Fecha</label>
+
+                                    <div class="ui icon input">
+                                        <input type="text" placeholder="11/11/2014" id="datetimepicker1" ng-click="datetime();">
+                                        <i class="calendar icon"></i>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <a class="ui black small button" href="#/rutas" ng-click="capturar();">Buscar</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ui twelve wide column">
+                            <h1 class="ui center aligned huge header purple" style="padding-top: 36px;">
+                                <i class="map marker icon"></i>
+                                Destinos mas Visitados
+                            </h1>
+
+                            <div class="ui grid">
+                                <div class="row">
+
+                                    <div class="ui five wide column">
+                                        <div class="ui left floated medium image">
+                                            <!-- <div class="ui ribbon label">Dogs</div>-->
+                                             <img class="ui rounded image" src="/assets/img/cuzco.png">
+                                         </div>
+
+                                         <!--<div class="ui teal ribbon label">Cuzco</div>-->
+                                    </div>
+                                    <div class="ui five wide column">
+                                        <img class="ui rounded medium image" src="/assets/img/arequipa.jpg">
+                                    </div>
+                                    <div class="ui five wide column">
+                                        <img class="ui rounded medium image" src="/assets/img/moquegua.png">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="ui five wide column">
+                                        <img class="ui rounded medium image" src="/assets/img/lima.jpg">
+                                    </div>
+                                    <div class="ui five wide column">
+                                        <img class="ui rounded medium image" src="/assets/img/cuzco.png">
+                                    </div>
+                                    <div class="ui five wide column">
+                                        <img class="ui rounded medium image" src="/assets/img/mancora.jpg">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="ui five wide column">
+                                        <img class="ui rounded medium image" src="/assets/img/chimbote.jpg">
+                                    </div>
+                                    <div class="ui five wide column">
+                                        <img class="ui rounded medium image" src="/assets/img/abancay.jpg">
+                                    </div>
+                                    <div class="ui five wide column">
+                                        <img class="ui rounded medium image" src="/assets/img/camana.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-blurred="/assets/img/img1.jpg">
+            </div>
+            <div class="slide" data-blurred="/assets/img/img2.jpg">
+            </div>
+            <div class="slide" data-blurred="/assets/img/img3.jpg">
+            </div>
+            <div class="slide" data-blurred="/assets/img/img4.jpg">
+            </div>
+            <div class="slide" data-blurred="/assets/img/img5.jpg">
+            </div>
+            <div class="slide" data-blurred="/assets/img/img6.jpg">
+            </div>
+            <div class="slide" data-blurred="/assets/img/img7.jpg">
+            </div>
+            <div class="slide" data-blurred="/assets/img/img8.jpg">
+            </div>
+            <div class="slide" data-blurred="/assets/img/img9.jpg">
+            </div>
+        </div>
+    </div>
+</div>

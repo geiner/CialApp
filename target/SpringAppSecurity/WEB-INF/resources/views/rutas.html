@@ -1,0 +1,145 @@
+<div class="container">
+    <div class="ui grid">
+        <div class="row" style="padding-top: 2%;">
+            <div class="ui four wide column">
+                <div class="ui grid">
+                    <div class="row">
+                        <div class="ui eight wide column" style="padding-top: 26px;padding-left: 28px;">
+                            <p class="ui left header teal">¿A donde Vamos?</p>
+                        </div>
+                        <div class="ui eight wide column">
+                            <img class="ui large right image" src="/assets/img/bus.png" id="bus" ng-mouseover="animacion_bus();">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui form  teal inverted segment">
+                    <div class="field">
+                        <label>Origen</label>
+
+                        <div class="ui fluid selection dropdown">
+                            <div class="text" id="selec">Seleccione</div>
+                            <i class="dropdown icon"></i>
+                            <input type="hidden" name="gender" id="origen">
+
+                            <div class="menu">
+                                <div class="item" data-value="lima">Lima</div>
+                                <div class="item" data-value="trujillo">Trujillo</div>
+                                <div class="item" data-value="tumbes">Tumbes</div>
+                                <div class="item" data-value="cuzco">Cuzco</div>
+                                <div class="item" data-value="piura">Piura</div>
+                                <div class="item" data-value="ica">Ica</div>
+                                <div class="item" data-value="ayacucho">Ayacucho</div>
+                                <div class="item" data-value="puno">Puno</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label>Destino</label>
+
+                        <div class="ui fluid selection dropdown">
+                            <div class="text" id="selec2">Seleccione</div>
+                            <i class="dropdown icon"></i>
+                            <input type="hidden" name="gender" id="destino">
+
+                            <div class="menu">
+                                <div class="item" data-value="lima">Lima</div>
+                                <div class="item" data-value="trujillo">Trujillo</div>
+                                <div class="item" data-value="tumbes">Tumbes</div>
+                                <div class="item" data-value="cuzco">Cuzco</div>
+                                <div class="item" data-value="piura">Piura</div>
+                                <div class="item" data-value="ica">Ica</div>
+                                <div class="item" data-value="ayacucho">Ayacucho</div>
+                                <div class="item" data-value="puno">Puno</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label>Fecha</label>
+
+                        <div class="ui icon input">
+                            <input type="text" placeholder="11/11/2014" id="datetimepicker1">
+                            <i class="calendar icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <a class="ui black small button" href="#/rutas">Buscar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ui eleven wide column">
+                <table class="ui five column table segment">
+                    <thead>
+                    <tr><th>Hora de Salida</th>
+                        <th>Precio S/.</th>
+                        <th>Tipo de Servicio</th>
+                        <th></th>
+                        <th></th>
+                    </tr></thead>
+                    <tbody>
+                    <tr>
+                        <td>Sabado 4:40</td>
+                        <td>120.00</td>
+                        <td>A</td>
+                        <td><a href="#/reserva_asiento"><div class="3 fluid purple ui vertical animated tiny button">
+                            <div class="hidden content">COMPRAR</div>
+                            <div class="visible content">
+                                <i class="cart icon"></i>
+                            </div>
+                        </div></a></td>
+                        <td>
+                            <i class="green info circular icon link" data-content="Asientos 180°,Comida durante viaje con baño"></i> info
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sabado 5:40</td>
+                        <td>90.00</td>
+                        <td>B</td>
+                        <td><a href="#/reserva_asiento"><div class="3 fluid purple ui vertical animated tiny button">
+                            <div class="hidden content">COMPRAR</div>
+                            <div class="visible content">
+                                <i class="cart icon"></i>
+                            </div>
+                        </div></a></td>
+                        <td>
+                            <i class="green info circular icon link" data-content="Hello, I am a pop-up."></i> info
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sabado 6:40</td>
+                        <td>90.00</td>
+                        <td>B</td>
+                        <td><a href="#/reserva_asiento"><div class="3 fluid purple ui vertical animated tiny button">
+                            <div class="hidden content">COMPRAR</div>
+                            <div class="visible content">
+                                <i class="cart icon"></i>
+                            </div>
+                        </div></a></td>
+                        <td>
+                            <i class="green info circular icon link" data-content="Hello, I am a pop-up."></i> info
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sabado 7:10</td>
+                        <td>65.00</td>
+                        <td>C</td>
+                        <td><a href="#/reserva_asiento"><div class="3 fluid purple ui vertical animated tiny button">
+                            <div class="hidden content">COMPRAR</div>
+                            <div class="visible content">
+                                <i class="cart icon"></i>
+                            </div>
+                        </div></a></td>
+                        <td>
+                            <i class="green info circular icon link" data-content="Hello, I am a pop-up."></i> info
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
