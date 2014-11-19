@@ -17,22 +17,22 @@
                 <div class="ui form">
                     <div class="field">
                         <label>Nombres</label>
-                        <input type="text" placeholder="carlos fernando"/>
+                        <input type="text" placeholder="carlos fernando" ng-model="usuario.nombres"/>
                     </div>
                     <div class="two fields">
                         <div class="field">
                             <label>Apellido Paterno</label>
-                            <input type="text"/>
+                            <input type="text" ng-model="usuario.ap_paterno"/>
                         </div>
                         <div class="field">
                             <label>Apellido Materno</label>
-                            <input type="text"/>
+                            <input type="text" ng-model="usuario.ap_materno"/>
                         </div>
                     </div>
                     <div class="two fields">
                         <div class="field">
                             <label>DNI</label>
-                            <input type="text"/>
+                            <input type="text" ng-model="usuario.dni"/>
                         </div>
                         <div class="field">
                             <label>Sexo</label>
@@ -40,7 +40,7 @@
                             <div class="ui fluid selection dropdown">
                                 <div class="text">Seleccione</div>
                                 <i class="dropdown icon"></i>
-                                <input type="hidden" name="gender">
+                                <input type="hidden" name="gender" ng-model="usuario.sexo">
 
                                 <div class="menu">
                                     <div class="item" data-value="M">Masculino</div>
@@ -52,20 +52,30 @@
                     <div class="two fields">
                         <div class="field">
                             <label>Edad</label>
-                            <input type="number"/>
+                            <input type="number" ng-model="usuario.edad"/>
                         </div>
                         <div class="field">
                             <label>Celular</label>
-                            <input type="text"/>
+                            <input type="text" ng-model="usuario.celular"/>
                         </div>
                     </div>
                     <div class="field">
                         <label>Correo Electronico</label>
-                        <input type="text"/>
+                        <input type="text" ng-model="usuario.correo"/>
                     </div>
                     <div class="field">
                         <label>Confirmar Correo Electronico</label>
                         <input type="text"/>
+                    </div>
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Elija una contraseña para su cuenta</label>
+                            <input type="password" ng-model="usuario.contrasenia"/>
+                        </div>
+                        <div class="field">
+                            <label>Confirmar Contraseña</label>
+                            <input type="password"/>
+                        </div>
                     </div>
                     <div class="field">
                         <label>Como se entero de CIAL?</label>
@@ -114,7 +124,7 @@
                     <br/>
                     <div class="two fields">
                         <div class="field" style="text-align: right">
-                            <button class="ui green small button">Registrar</button>
+                            <button class="ui green small button" ng-click="registrarse(usuario);">Registrar</button>
                         </div>
                         <div class="field" style="text-align: left">
                             <button class="ui small button" type="reset">Cancelar</button>

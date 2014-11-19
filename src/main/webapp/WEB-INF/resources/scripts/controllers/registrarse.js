@@ -1,7 +1,7 @@
 define(['angular'], function (angular) {
     'use strict';
 
-    angular.module('ModuloRegistrarse', []).controller('RegistrarseCtrl', function ($scope) {
+    angular.module('ModuloRegistrarse', []).controller('RegistrarseCtrl', function ($scope,$http) {
 
         //$.vegas('destroy');
         $('.ui.dropdown').dropdown({
@@ -17,6 +17,17 @@ define(['angular'], function (angular) {
         $('.ui.checkbox')
             .checkbox()
         ;
+
+        $scope.registrarse=function(usuario){
+            alert(usuario.nombres);
+            $http.post('/rest/usuario/registrar', usuario).
+                success(function(data, status, headers, config) {
+                    alert("registro exitoso")
+                }).
+                error(function(data, status, headers, config) {
+
+                });
+        }
 
     })
 });
