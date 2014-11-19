@@ -19,8 +19,12 @@ define(['angular'], function (angular) {
         ;
 
         $scope.registrarse=function(usuario){
-            alert(usuario.nombres);
-            $http.post('/rest/usuario/registrar', usuario).
+            var user={};
+            user=usuario;
+            user.sexo=$('#sexo').val();
+//            usuario.sexo=$('#sexo').val();
+            alert(user.sexo);
+            $http.post('/rest/usuario/registrar', user).
                 success(function(data, status, headers, config) {
                     alert("registro exitoso")
                 }).
