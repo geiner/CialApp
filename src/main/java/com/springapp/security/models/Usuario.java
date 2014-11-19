@@ -10,7 +10,7 @@ public class Usuario {
     private Integer dni;
     private String sexo;
     private Integer edad;
-    private String celular;
+    private Integer celular;
     private String correo;
     private String contrasenia;
 
@@ -62,11 +62,11 @@ public class Usuario {
         this.edad = edad;
     }
 
-    public String getCelular() {
+    public Integer getCelular() {
         return celular;
     }
 
-    public void setCelular(String celular) {
+    public void setCelular(Integer celular) {
         this.celular = celular;
     }
 
