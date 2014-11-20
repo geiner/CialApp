@@ -12,9 +12,10 @@ define(['angular'], function (angular) {
             $('#selec2').text($('#destino').val());
             $('#datetimepicker1').val($('#fec').text());
             setTimeout(function(){
-                $http.get('/rest/rutas/listar').success(function(response){
-
-                });
+                $http.get('/rest/usuario/listar_rutas/'+$('#origen').val()+'/'+$('#destino').val()+'/'+$('#fec').text())
+                    .success(function(response){
+                          alert(response.cod_bus);
+                    });
             },2000)
         },2000);
 
