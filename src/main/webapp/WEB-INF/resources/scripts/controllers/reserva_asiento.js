@@ -10,6 +10,7 @@ define(['angular'], function (angular) {
          src:'/overlays/02.png',
          opacity:1
          });*/
+        $scope.asientosseleccionados=[]
         $scope.bs1 = {
         };
 
@@ -46,14 +47,36 @@ define(['angular'], function (angular) {
                         '<i class="trash icon"></i>'+
                     '</div>'+
                 '</div></td>'+
-                '</tr>')
+                '</tr>');
+
+                $scope.asientosseleccionados.push(cod_aciento);
+                for(var i=0;i<$scope.asientosseleccionados.length;i++){
+                    console.log($scope.asientosseleccionados[i]);
+                }
             }else{
                 if($('#'+cod_aciento).hasClass("green")){
                     $('#'+cod_aciento).addClass("nada")
                     $('#'+cod_aciento).removeClass("green")
                     $('#tr_'+cod_aciento).remove();
+                    $scope.asientosseleccionados.splice($scope.asientosseleccionados.indexOf(cod_aciento),1);
+                    for(var i=0;i<$scope.asientosseleccionados.length;i++){
+                        console.log($scope.asientosseleccionados[i]);
+                    }
                 }
             }
+        };
+
+        $scope.guardar_asientos=function(){
+            var todos="";
+            for(var i=0;i<$scope.asientosseleccionados.length;i++){
+                if(i==$scope.asientosseleccionados.length-1){
+                    todos=todos+$scope.asientosseleccionados[i]
+                }else{
+                    todos=todos+$scope.asientosseleccionados[i]+"-"
+                }
+            };
+//            console.log(todos)
+            $('#asientos').text(todos);
         }
 
     })

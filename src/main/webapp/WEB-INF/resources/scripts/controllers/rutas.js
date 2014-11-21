@@ -7,20 +7,20 @@ define(['angular'], function (angular) {
         });
         $scope.datos={
         };
-        setTimeout(function () {
-            $('#origen').val($('#or').text());
-            $('#selec').text($('#origen').val());
-            $('#destino').val($('#des').text())
-            $('#selec2').text($('#destino').val());
+//        setTimeout(function () {
+//            $('#origen').val($('#or').text());
+//            $('#selec').text($('#origen').val());
+//            $('#destino').val($('#des').text())
+//            $('#selec2').text($('#destino').val());
             $('#datetimepicker1').val($('#fec').text());
             setTimeout(function(){
-                $http.get('/rest/bus/listar/'+$('#origen').val()+'/'+$('#destino').val()/*+'/'+$('#fec').text()*/)
+                $http.get('/rest/bus/listar/'+$('#or').text()+'/'+$('#des').text()/*+'/'+$('#fec').text()*/)
                     .success(function(response){
                         $scope.datos=response;
                           alert($scope.datos.length);
                     });
             },2000)
-        },2000);
+//        },2000);
 
         $('#datetimepicker1').datetimepicker({
             pickTime: false

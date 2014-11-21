@@ -90,6 +90,7 @@
     <input type="text" id="des"/>
     <input type="text" id="fec"/>
     <input type="text" id="codi_bus"/>
+    <textarea id="asientos" cols="30" rows="10"></textarea>
 </div>
 
 <div class="ui purple inverted  menu" style="margin-bottom: 0px;margin-top: 0px;">

@@ -6,76 +6,79 @@
                     <i class="user icon"></i>
                     Registro(s) de Pasajero(s)
                 </h3>
-                <div class="ui buttons">
-                    <div class="ui instagram button">1</div>
-                    <div class="ui instagram button"><i class="map marker icon"></i>Lima-Trujillo</div>
-                    <div class="ui instagram button"><i class="male icon"></i>Asiento 34</div>
-                    <div class="ui instagram button"><i class="calendar icon"></i>8/11/2014 4:40pm</div>
-                    <div class="ui instagram button"><i class="money icon"></i>S/.120.00</div>
+                <div ng-repeat="dato in todos">
+                    <div class="ui buttons">
+                        <div class="ui instagram button">1</div>
+                        <div class="ui instagram button"><i class="map marker icon"></i>Lima-Trujillo</div>
+                        <div class="ui instagram button"><i class="male icon"></i>Asiento {{dato}}</div>
+                        <div class="ui instagram button"><i class="calendar icon"></i>8/11/2014 4:40pm</div>
+                        <div class="ui instagram button"><i class="money icon"></i>S/.120.00</div>
+                    </div>
+                    <table class="ui celled table segment">
+                        <thead>
+                        <tr><th>Tipo Documento</th>
+                            <th>Numero Documento</th>
+                            <th>Nombre del Pasajero</th>
+                        </tr></thead>
+                        <tbody>
+                        <tr>
+                            <td><div class="ui selection dropdown">
+                                <input type="hidden" name="gender">
+                                <div class="default text">Seleccione</div>
+                                <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <div class="item" data-value="1">DNI</div>
+                                    <div class="item" data-value="0">PASAPORTE</div>
+                                </div>
+                            </div></td>
+                            <td><div class="ui input">
+                                <input type="text" placeholder="1234567">
+                            </div></td>
+                            <td><div class="ui left icon input">
+                                <input type="text" placeholder="nombre y apellidos">
+                                <i class="user icon"></i>
+                            </div></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <!--<div class="ui buttons">
+                        <div class="ui instagram button">2</div>
+                        <div class="ui instagram button"><i class="map marker icon"></i>Lima-Trujillo</div>
+                        <div class="ui instagram button"><i class="male icon"></i>Asiento 47</div>
+                        <div class="ui instagram button"><i class="calendar icon"></i>8/11/2014 4:40pm</div>
+                        <div class="ui instagram button"><i class="money icon"></i>S/.120.00</div>
+                    </div>
+                    <table class="ui celled table segment">
+                        <thead>
+                        <tr><th>Tipo Documento</th>
+                            <th>Numero Documento</th>
+                            <th>Nombre del Pasajero</th>
+                        </tr></thead>
+                        <tbody>
+                        <tr>
+                            <td><div class="ui selection dropdown">
+                                <input type="hidden" name="gender">
+                                <div class="default text">Seleccione</div>
+                                <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <div class="item" data-value="1">DNI</div>
+                                    <div class="item" data-value="0">PASAPORTE</div>
+                                </div>
+                            </div></td>
+                            <td><div class="ui input">
+                                <input type="text" placeholder="1234567">
+                            </div></td>
+                            <td><div class="ui left icon input">
+                                <input type="text" placeholder="nombre y apellidos">
+                                <i class="user icon"></i>
+                            </div></td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                    </table>-->
                 </div>
-                <table class="ui celled table segment">
-                    <thead>
-                    <tr><th>Tipo Documento</th>
-                        <th>Numero Documento</th>
-                        <th>Nombre del Pasajero</th>
-                    </tr></thead>
-                    <tbody>
-                    <tr>
-                        <td><div class="ui selection dropdown">
-                            <input type="hidden" name="gender">
-                            <div class="default text">Seleccione</div>
-                            <i class="dropdown icon"></i>
-                            <div class="menu">
-                                <div class="item" data-value="1">DNI</div>
-                                <div class="item" data-value="0">PASAPORTE</div>
-                            </div>
-                        </div></td>
-                        <td><div class="ui input">
-                            <input type="text" placeholder="1234567">
-                        </div></td>
-                        <td><div class="ui left icon input">
-                            <input type="text" placeholder="nombre y apellidos">
-                            <i class="user icon"></i>
-                        </div></td>
-                    </tr>
-                    </tbody>
-                    <tfoot>
-                </table>
-                <div class="ui buttons">
-                    <div class="ui instagram button">2</div>
-                    <div class="ui instagram button"><i class="map marker icon"></i>Lima-Trujillo</div>
-                    <div class="ui instagram button"><i class="male icon"></i>Asiento 47</div>
-                    <div class="ui instagram button"><i class="calendar icon"></i>8/11/2014 4:40pm</div>
-                    <div class="ui instagram button"><i class="money icon"></i>S/.120.00</div>
-                </div>
-                <table class="ui celled table segment">
-                    <thead>
-                    <tr><th>Tipo Documento</th>
-                        <th>Numero Documento</th>
-                        <th>Nombre del Pasajero</th>
-                    </tr></thead>
-                    <tbody>
-                    <tr>
-                        <td><div class="ui selection dropdown">
-                            <input type="hidden" name="gender">
-                            <div class="default text">Seleccione</div>
-                            <i class="dropdown icon"></i>
-                            <div class="menu">
-                                <div class="item" data-value="1">DNI</div>
-                                <div class="item" data-value="0">PASAPORTE</div>
-                            </div>
-                        </div></td>
-                        <td><div class="ui input">
-                            <input type="text" placeholder="1234567">
-                        </div></td>
-                        <td><div class="ui left icon input">
-                            <input type="text" placeholder="nombre y apellidos">
-                            <i class="user icon"></i>
-                        </div></td>
-                    </tr>
-                    </tbody>
-                    <tfoot>
-                </table>
+
             </div>
             <div class="column">
                 <div class="ui piled secondary inverted teal segment">
