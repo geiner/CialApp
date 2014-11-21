@@ -44,24 +44,14 @@ define(['angular'], function (angular) {
             ;
         };
 
-        $scope.capturar=function(buss){
-            var busAsignado={};
-            busAsignado=buss;
-            busAsignado.origen=$('#origen').val();
-            busAsignado.destino=$('#destino').val();
-            busAsignado.datetimepicker1=$('#datetimepicker1').val();
-            $http.get('/rest/buss/hello', {
-                    params: {
-                        idS: busAsignado.origen,
-                        idL:  busAsignado.destino,
-                        fecha: busAsignado.datetimepicker1
-                    }
-                }).success(function(data, status, headers, config) {
-                    console.dir("busquedad exitosa");
-                }).
-                error(function(data, status, headers, config) {
-
-                });
+        $scope.capturar=function(){
+            var origen=$('#origen').val();
+            var destino=$('#destino').val();
+            var fecha=$('#datetimepicker1').val();
+            $('#or').text(origen);
+            $('#des').text(destino);
+            $('#fec').text(fecha);
+            alert(origen+destino+fecha)
         }
 
 

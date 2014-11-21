@@ -1,6 +1,7 @@
 package com.springapp.security.services;
 
 import com.springapp.security.models.Bus;
+import com.springapp.security.models.Rutas;
 
 import java.util.List;
 
@@ -8,6 +9,6 @@ import java.util.List;
  * Created by esantiago on 20/11/2014.
  */
 public interface BusService {
-    List<Bus> mostrarRutas(int salida,int llegada,String fecha);
+    List<Rutas> mostrarRutas(int salida,int llegada,String fecha);
 
 }

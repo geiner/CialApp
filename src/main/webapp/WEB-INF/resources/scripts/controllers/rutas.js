@@ -5,6 +5,8 @@ define(['angular'], function (angular) {
         $('.ui.dropdown').dropdown({
             on: 'click'
         });
+        $scope.datos={
+        };
         setTimeout(function () {
             $('#origen').val($('#or').text());
             $('#selec').text($('#origen').val());
@@ -12,9 +14,10 @@ define(['angular'], function (angular) {
             $('#selec2').text($('#destino').val());
             $('#datetimepicker1').val($('#fec').text());
             setTimeout(function(){
-                $http.get('/rest/usuario/listar_rutas/'+$('#origen').val()+'/'+$('#destino').val()+'/'+$('#fec').text())
+                $http.get('/rest/bus/listar/'+$('#origen').val()+'/'+$('#destino').val()/*+'/'+$('#fec').text()*/)
                     .success(function(response){
-                          alert(response.cod_bus);
+                        $scope.datos=response;
+                          alert($scope.datos.length);
                     });
             },2000)
         },2000);

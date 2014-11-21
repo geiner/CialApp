@@ -18,19 +18,19 @@
                         <label>Origen</label>
 
                         <div class="ui fluid selection dropdown">
-                            <div class="text" id="selec">Seleccione</div>
+                            <div class="text">Seleccione</div>
                             <i class="dropdown icon"></i>
-                            <input type="hidden" name="gender" id="origen">
+                            <input type="hidden" name="gender"  ng-model="buss.cod_dep_salida" id="origen">
 
                             <div class="menu">
-                                <div class="item" data-value="lima">Lima</div>
-                                <div class="item" data-value="trujillo">Trujillo</div>
-                                <div class="item" data-value="tumbes">Tumbes</div>
-                                <div class="item" data-value="cuzco">Cuzco</div>
-                                <div class="item" data-value="piura">Piura</div>
-                                <div class="item" data-value="ica">Ica</div>
-                                <div class="item" data-value="ayacucho">Ayacucho</div>
-                                <div class="item" data-value="puno">Puno</div>
+                                <div class="item" data-value="1">Lima</div>
+                                <div class="item" data-value="44">La Libertad</div>
+                                <div class="item" data-value="54">Arequipa</div>
+                                <div class="item" data-value="84">Cuzco</div>
+                                <div class="item" data-value="73">Piura</div>
+                                <div class="item" data-value="52">Tacna</div>
+                                <div class="item" data-value="66">Ayacucho</div>
+                                <div class="item" data-value="51">Puno</div>
                             </div>
                         </div>
                     </div>
@@ -39,19 +39,19 @@
                         <label>Destino</label>
 
                         <div class="ui fluid selection dropdown">
-                            <div class="text" id="selec2">Seleccione</div>
+                            <div class="text">Seleccione</div>
                             <i class="dropdown icon"></i>
-                            <input type="hidden" name="gender" id="destino">
+                            <input type="hidden" name="gender" ng-model="buss.cod_dep_llegada" id="destino">
 
                             <div class="menu">
-                                <div class="item" data-value="lima">Lima</div>
-                                <div class="item" data-value="trujillo">Trujillo</div>
-                                <div class="item" data-value="tumbes">Tumbes</div>
-                                <div class="item" data-value="cuzco">Cuzco</div>
-                                <div class="item" data-value="piura">Piura</div>
-                                <div class="item" data-value="ica">Ica</div>
-                                <div class="item" data-value="ayacucho">Ayacucho</div>
-                                <div class="item" data-value="puno">Puno</div>
+                                <div class="item" data-value="1">Lima</div>
+                                <div class="item" data-value="44">La Libertad</div>
+                                <div class="item" data-value="54">Arequipa</div>
+                                <div class="item" data-value="84">Cuzco</div>
+                                <div class="item" data-value="73">Piura</div>
+                                <div class="item" data-value="52">Tacna</div>
+                                <div class="item" data-value="66">Ayacucho</div>
+                                <div class="item" data-value="51">Puno</div>
                             </div>
                         </div>
                     </div>
@@ -80,61 +80,8 @@
                         <th></th>
                     </tr></thead>
                     <tbody>
-                    <tr>
-                        <td>Sabado 4:40</td>
-                        <td>120.00</td>
-                        <td>A</td>
-                        <td><a href="#/reserva_asiento"><div class="3 fluid purple ui vertical animated tiny button">
-                            <div class="hidden content">COMPRAR</div>
-                            <div class="visible content">
-                                <i class="cart icon"></i>
-                            </div>
-                        </div></a></td>
-                        <td>
-                            <i class="green info circular icon link" data-content="Asientos 180°,Comida durante viaje con baño"></i> info
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Sabado 5:40</td>
-                        <td>90.00</td>
-                        <td>B</td>
-                        <td><a href="#/reserva_asiento"><div class="3 fluid purple ui vertical animated tiny button">
-                            <div class="hidden content">COMPRAR</div>
-                            <div class="visible content">
-                                <i class="cart icon"></i>
-                            </div>
-                        </div></a></td>
-                        <td>
-                            <i class="green info circular icon link" data-content="Hello, I am a pop-up."></i> info
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Sabado 6:40</td>
-                        <td>90.00</td>
-                        <td>B</td>
-                        <td><a href="#/reserva_asiento"><div class="3 fluid purple ui vertical animated tiny button">
-                            <div class="hidden content">COMPRAR</div>
-                            <div class="visible content">
-                                <i class="cart icon"></i>
-                            </div>
-                        </div></a></td>
-                        <td>
-                            <i class="green info circular icon link" data-content="Hello, I am a pop-up."></i> info
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Sabado 7:10</td>
-                        <td>65.00</td>
-                        <td>C</td>
-                        <td><a href="#/reserva_asiento"><div class="3 fluid purple ui vertical animated tiny button">
-                            <div class="hidden content">COMPRAR</div>
-                            <div class="visible content">
-                                <i class="cart icon"></i>
-                            </div>
-                        </div></a></td>
-                        <td>
-                            <i class="green info circular icon link" data-content="Hello, I am a pop-up."></i> info
-                        </td>
+                    <tr ng-repeat="dato in datos">
+                        <td>{{dato.fecha}}</td>
                     </tr>
                     </tbody>
                 </table>
