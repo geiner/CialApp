@@ -76,7 +76,7 @@ define(['angular'], function (angular) {
                 }
             };
 //            console.log(todos)
-            $('#asientos').text(todos);
+//            $('#asientos').text(todos);
         }
 
     })

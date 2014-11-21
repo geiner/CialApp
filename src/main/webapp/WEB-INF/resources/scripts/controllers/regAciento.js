@@ -14,7 +14,7 @@ define(['angular'], function (angular) {
             opacity:1
         });*/
 //        $scope.datos={}
-        alert($('#asientos').text());
+//        alert($('#asientos').text());
         $scope.todos=$('#asientos').text().split("-");
         for(var i=0;i<$scope.todos.length;i++){
             console.log($scope.todos[i]);

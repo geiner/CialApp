@@ -51,7 +51,7 @@ define(['angular'], function (angular) {
             $('#or').text(origen);
             $('#des').text(destino);
             $('#fec').text(fecha);
-            alert(origen+destino+fecha)
+//            alert(origen+destino+fecha)
         }
 
 
