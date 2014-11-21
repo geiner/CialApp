@@ -33,8 +33,8 @@ public interface BusMapper {
             "WHERE b.cod_tipo     =i.cod_tipo " +
             "AND d.cod_dep        =b.cod_dep_salida " +
             "AND p.cod_dep        =b.cod_dep_llegada " +
-            "AND trim(b.cod_dep_salida) =1 " +
-            "AND trim(b.cod_dep_llegada)=52 " +
+            "AND trim(b.cod_dep_salida) =#{salida} " +
+            "AND trim(b.cod_dep_llegada)=#{llegada} " +
             "AND trim(b.dia)            =19 " +
             "AND trim(b.mes)            =11 " +
             "AND trim(b.anio)           =2014")

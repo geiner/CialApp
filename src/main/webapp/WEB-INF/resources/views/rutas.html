@@ -82,6 +82,17 @@
                     <tbody>
                     <tr ng-repeat="dato in datos">
                         <td>{{dato.fecha}}</td>
+                        <td>{{dato.precio}}</td>
+                        <td>{{dato.tipo_servicio}}</td>
+                        <td><a href="#/reserva_asiento" data="{{dato.cod_bus}}"><div class="3 fluid purple ui vertical animated tiny button">
+                            <div class="hidden content">COMPRAR</div>
+                            <div class="visible content">
+                                <i class="cart icon"></i>
+                            </div>
+                        </div></a></td>
+                        <td>
+                            <i class="green info circular icon link" data-content="{{dato.informacion}} Asientos 180°,Comida durante viaje con baño"></i> info
+                        </td>
                     </tr>
                     </tbody>
                 </table>
