@@ -23,17 +23,17 @@
                                     <div class="ui fluid selection dropdown">
                                         <div class="text">Seleccione</div>
                                         <i class="dropdown icon"></i>
-                                        <input type="hidden" name="gender" id="origen">
+                                        <input type="hidden" name="gender"  ng-model="buss.cod_dep_salida" id="origen">
 
                                         <div class="menu">
-                                            <div class="item" data-value="lima">Lima</div>
-                                            <div class="item" data-value="trujillo">Trujillo</div>
-                                            <div class="item" data-value="tumbes">Tumbes</div>
-                                            <div class="item" data-value="cuzco">Cuzco</div>
-                                            <div class="item" data-value="piura">Piura</div>
-                                            <div class="item" data-value="ica">Ica</div>
-                                            <div class="item" data-value="ayacucho">Ayacucho</div>
-                                            <div class="item" data-value="puno">Puno</div>
+                                            <div class="item" data-value="1">Lima</div>
+                                            <div class="item" data-value="44">La Libertad</div>
+                                            <div class="item" data-value="54">Arequipa</div>
+                                            <div class="item" data-value="84">Cuzco</div>
+                                            <div class="item" data-value="73">Piura</div>
+                                            <div class="item" data-value="52">Tacna</div>
+                                            <div class="item" data-value="66">Ayacucho</div>
+                                            <div class="item" data-value="51">Puno</div>
                                         </div>
                                     </div>
                                 </div>
@@ -44,17 +44,17 @@
                                     <div class="ui fluid selection dropdown">
                                         <div class="text">Seleccione</div>
                                         <i class="dropdown icon"></i>
-                                        <input type="hidden" name="gender" id="destino">
+                                        <input type="hidden" name="gender" ng-model="buss.cod_dep_llegada" id="destino">
 
                                         <div class="menu">
-                                            <div class="item" data-value="lima">Lima</div>
-                                            <div class="item" data-value="trujillo">Trujillo</div>
-                                            <div class="item" data-value="tumbes">Tumbes</div>
-                                            <div class="item" data-value="cuzco">Cuzco</div>
-                                            <div class="item" data-value="piura">Piura</div>
-                                            <div class="item" data-value="ica">Ica</div>
-                                            <div class="item" data-value="ayacucho">Ayacucho</div>
-                                            <div class="item" data-value="puno">Puno</div>
+                                            <div class="item" data-value="1">Lima</div>
+                                            <div class="item" data-value="44">La Libertad</div>
+                                            <div class="item" data-value="54">Arequipa</div>
+                                            <div class="item" data-value="84">Cuzco</div>
+                                            <div class="item" data-value="73">Piura</div>
+                                            <div class="item" data-value="52">Tacna</div>
+                                            <div class="item" data-value="66">Ayacucho</div>
+                                            <div class="item" data-value="51">Puno</div>
                                         </div>
                                     </div>
                                 </div>
@@ -63,13 +63,13 @@
                                     <label>Fecha</label>
 
                                     <div class="ui icon input">
-                                        <input type="text" placeholder="11/11/2014" id="datetimepicker1" ng-click="datetime();">
+                                        <input type="text" placeholder="11/11/2014"   ng-click="datetime();" ng-model="buss.fecha" id="datetimepicker1">
                                         <i class="calendar icon"></i>
                                     </div>
                                 </div>
 
                                 <div class="field">
-                                    <a class="ui black small button" href="#/rutas" ng-click="capturar();">Buscar</a>
+                                    <a class="ui black small button" href="#/rutas" ng-click="capturar(buss);">Buscar</a>
                                 </div>
                             </div>
                         </div>
@@ -86,10 +86,10 @@
                                     <div class="ui five wide column">
                                         <div class="ui left floated medium image">
                                             <!-- <div class="ui ribbon label">Dogs</div>-->
-                                             <img class="ui rounded image" src="/assets/img/cuzco.png">
-                                         </div>
+                                            <img class="ui rounded image" src="/assets/img/cuzco.png">
+                                        </div>
 
-                                         <!--<div class="ui teal ribbon label">Cuzco</div>-->
+                                        <!--<div class="ui teal ribbon label">Cuzco</div>-->
                                     </div>
                                     <div class="ui five wide column">
                                         <img class="ui rounded medium image" src="/assets/img/arequipa.jpg">

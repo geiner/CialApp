@@ -1,7 +1,7 @@
 define(['angular'], function (angular) {
     'use strict';
 
-    angular.module('ModuloPrincipal', []).controller('HelloCtrl', function ($scope) {
+    angular.module('ModuloPrincipal', []).controller('HelloCtrl', function ($scope,$http) {
 
         $('.ui.dropdown').dropdown({
             on: 'click'
@@ -44,13 +44,24 @@ define(['angular'], function (angular) {
             ;
         };
 
-        $scope.capturar=function(){
-            var origen=$('#origen').val();
-            var destino=$('#destino').val();
-            var fecha=$('#datetimepicker1').val();
-            $('#or').text(origen);
-            $('#des').text(destino);
-            $('#fec').text(fecha);
+        $scope.capturar=function(buss){
+            var busAsignado={};
+            busAsignado=buss;
+            busAsignado.origen=$('#origen').val();
+            busAsignado.destino=$('#destino').val();
+            busAsignado.datetimepicker1=$('#datetimepicker1').val();
+            $http.get('/rest/buss/hello', {
+                    params: {
+                        idS: busAsignado.origen,
+                        idL:  busAsignado.destino,
+                        fecha: busAsignado.datetimepicker1
+                    }
+                }).success(function(data, status, headers, config) {
+                    console.dir("busquedad exitosa");
+                }).
+                error(function(data, status, headers, config) {
+
+                });
         }
 
 
