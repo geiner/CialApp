@@ -32,13 +32,13 @@ define(['angular'], function (angular) {
             /**/
         };
 
-        $scope.almacenar = function (cod_aciento) {
+        $scope.almacenar = function (cod_aciento,num_aciento) {
 //            alert(cod_aciento);
             if($('#'+cod_aciento).hasClass("nada")){
                 $('#'+cod_aciento).addClass("green")
                 $('#'+cod_aciento).removeClass("nada")
                 $('#seleccion').append('<tr id="tr_'+cod_aciento+'">'+
-                    '<td><div class="ui green button">'+cod_aciento+'</div></td>'+
+                    '<td><div class="ui green button">'+num_aciento+'</div></td>'+
                 '<td>120.00</td>'+
                 '<td><div class="3 fluid red ui vertical animated tiny button" ng-click="EliminarAciento()">'+
                     '<div class="hidden content">Eliminar</div>'+

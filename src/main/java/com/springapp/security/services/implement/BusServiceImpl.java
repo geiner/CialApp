@@ -35,7 +35,7 @@ public class BusServiceImpl implements BusService {
                 bus.get(i).setPintar("nada");
             }else{
                 if(bus.get(i).getCod_estado()==3){
-                    bus.get(i).setPintar("purple");
+                    bus.get(i).setPintar("yellow");
                 }else{
                     bus.get(i).setPintar("black");
                 }
@@ -52,7 +52,7 @@ public class BusServiceImpl implements BusService {
                 bus.get(i).setPintar("nada");
             }else{
                 if(bus.get(i).getCod_estado()==3){
-                    bus.get(i).setPintar("purple");
+                    bus.get(i).setPintar("yellow");
                 }else{
                     bus.get(i).setPintar("black");
                 }
@@ -69,7 +69,7 @@ public class BusServiceImpl implements BusService {
                 bus.get(i).setPintar("nada");
             }else{
                 if(bus.get(i).getCod_estado()==3){
-                    bus.get(i).setPintar("purple");
+                    bus.get(i).setPintar("yellow");
                 }else{
                     bus.get(i).setPintar("black");
                 }
@@ -86,7 +86,7 @@ public class BusServiceImpl implements BusService {
                 bus.get(i).setPintar("nada");
             }else{
                 if(bus.get(i).getCod_estado()==3){
-                    bus.get(i).setPintar("purple");
+                    bus.get(i).setPintar("yellow");
                 }else{
                     bus.get(i).setPintar("black");
                 }

@@ -4737,6 +4737,10 @@ i.massive.basic.icon {
     background-color: #564F8A;
     color: #FFF
 }
+.ui.yellow.button, .ui.yellow.buttons .button {
+    background-color: #CCCF6A;
+    color: #FFF
+}
 
 .ui.purple.button.active, .ui.purple.button:hover, .ui.purple.buttons .active.button, .ui.purple.buttons .button:hover {
     background-color: #3E3773;
