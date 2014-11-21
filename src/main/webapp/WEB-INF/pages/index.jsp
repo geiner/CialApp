@@ -3,29 +3,29 @@
 
 <!--<!doctype>
 <html>
-    <head>
-        <title>Home</title>
-    </head>
-    <body>
-        <div>
-            <h1>Home</h1>
-            <sec:authorize access="isAnonymous()">
-                <p>
-                    <a href="/spring_security_login">Sign In</a>
-                </p>
-            </sec:authorize>
+<head>
+<title>Home</title>
+</head>
+<body>
+<div>
+<h1>Home</h1>
+<sec:authorize access="isAnonymous()">
+    <p>
+    <a href="/spring_security_login">Sign In</a>
+    </p>
+</sec:authorize>
 
-            <sec:authorize access="isAuthenticated()">
-                <p>Hello, ${userDetails.username}! <a href="/j_spring_security_logout">Sign Out</a></p>
-            </sec:authorize>
+<sec:authorize access="isAuthenticated()">
+    <p>Hello, ${userDetails.username}! <a href="/j_spring_security_logout">Sign Out</a></p>
+</sec:authorize>
 
-            <sec:authorize access="hasRole('admin')">
-                <p>
-                    <a href="/admin">Admin page</a>
-                </p>
-            </sec:authorize>
-        </div>
-    </body>
+<sec:authorize access="hasRole('admin')">
+    <p>
+    <a href="/admin">Admin page</a>
+    </p>
+</sec:authorize>
+</div>
+</body>
 </html>-->
 <!doctype html>
 <html lang="en" ng-app="cialApp">
@@ -61,19 +61,21 @@
                                     </div>
                                 </div>
                                 <sec:authorize access="isAnonymous()">
-                                <div class="item">
-                                    <div class="ui tiny buttons" style="font-size: 13px;">
-                                        <a class="ui button purple" href="#/ingresar">Ingresar</a>
+                                    <div class="item">
+                                        <div class="ui tiny buttons" style="font-size: 13px;">
+                                            <a class="ui button purple" href="#/ingresar">Ingresar</a>
 
-                                        <div class="or"></div>
-                                        <a class="ui button tiny" href="#/registrarse">Registrarse</a>
+                                            <div class="or"></div>
+                                            <a class="ui button tiny" href="#/registrarse">Registrarse</a>
+                                        </div>
                                     </div>
-                                </div>
                                 </sec:authorize>
                                 <sec:authorize access="isAuthenticated()">
                                     <div class="item">
                                         <div class="ui">
-                                            <p>Hello, ${userDetails.username}! <a href="/j_spring_security_logout">Sign Out</a></p>
+                                            <p>Hola, ${userDetails.username}! <i class="user icon"></i>
+                                                <a href="/j_spring_security_logout" class="ui mini red button" style="width: 27px;padding-bottom: 4px;
+                                                padding-top: 4px; padding-left: 5px;padding-right: 5px;"><i class="off icon"></i></a>
                                         </div>
                                     </div>
                                 </sec:authorize>
@@ -104,7 +106,9 @@
 
             <div class="menu">
                 <a class="item" href="#/historia"><i class="stackexchange icon"></i> Nuestra Historia</a>
+
                 <div class="ui dropdown submenu item" id="">Nuestra Filosofia <i class="dropdown icon"></i>
+
                     <div class="menu">
                         <a class="item" href="#/mision"><i class="forward mail icon"></i> Mision</a>
                         <a class="item" href="#/vision"><i class="forward mail icon"></i> Vision</a>
@@ -122,7 +126,7 @@
             <i class="file outline icon"></i> Terminos Y Condiciones
         </a>
         <a class="item" href="#/ayuda">
-            <i class="help icon"></i>  Preguntas y Ayudas
+            <i class="help icon"></i> Preguntas y Ayudas
         </a>
 
         <div class="right menu">
@@ -169,39 +173,47 @@
             <div class="row">
                 <div class="ui four wide column">
                     <dl>
-                        <dt><h4 class="ui header"><i class="map marker icon"></i> Terminales principales</h4></dt>
+                        <dt>
+                        <h4 class="ui header"><i class="map marker icon"></i> Terminales principales</h4></dt>
                         <br/>
                         <dd><a href="">Av. Paseo de la República Nro. 569 - La Victoria - PERÚ </a></dd>
-                        <dd><a href="">Av. Javier Prado Este Nro. 1155   - La Victoria - PERÚ</a></dd>
-                        <dd><a href="">Av. Javier Prado Este Nro. 1155   - La Victoria - PERÚ</a></dd>
+                        <dd><a href="">Av. Javier Prado Este Nro. 1155 - La Victoria - PERÚ</a></dd>
+                        <dd><a href="">Av. Javier Prado Este Nro. 1155 - La Victoria - PERÚ</a></dd>
                     </dl>
                 </div>
                 <div class="ui four wide column">
                     <dl>
-                        <dt><h4 class="ui header"><i class="ui phone icon"></i> Central Telefónica</h4></dt>
+                        <dt>
+                        <h4 class="ui header"><i class="ui phone icon"></i> Central Telefónica</h4></dt>
                         <br/>
                         <dd><a href="">01 555 4879</a></dd>
                     </dl>
                 </div>
                 <div class="ui four wide column">
                     <dl>
-                        <dt><h4 class="ui header"><i class="ui mail outline icon"></i> E-Mail</h4></dt>
+                        <dt>
+                        <h4 class="ui header"><i class="ui mail outline icon"></i> E-Mail</h4></dt>
                         <br/>
                         <dd><a href="">cial.contacto@cial.com.pe</a></dd>
                     </dl>
                 </div>
                 <div class="ui four wide column">
                     <dl>
-                        <dt><h4 class="ui header"><i class="ui users icon"></i> Siguenos en</h4></dt>
+                        <dt>
+                        <h4 class="ui header"><i class="ui users icon"></i> Siguenos en</h4></dt>
                         <br/>
                         <dd><img class="facebook" src="/assets//img/facebook-gray.png" style="width: 12%;">
-                            <img style="display:none;width: 12%;" class="facebook_hide" src="/assets//img/facebook.png"></dd>
+                            <img style="display:none;width: 12%;" class="facebook_hide" src="/assets//img/facebook.png">
+                        </dd>
                         <dd><img class="twitter" src="/assets//img/twitter-gray.png" style="width: 12%;">
-                            <img style="display:none;width: 12%;" class="twitter_hide" src="/assets//img/twitter.png"></dd>
+                            <img style="display:none;width: 12%;" class="twitter_hide" src="/assets//img/twitter.png">
+                        </dd>
                         <dd><img class="youtube" src="/assets//img/youtube-gray.png" style="width: 12%;">
-                            <img style="display:none;width: 12%;" class="youtube_hide" src="/assets//img/youtube.png"></dd>
+                            <img style="display:none;width: 12%;" class="youtube_hide" src="/assets//img/youtube.png">
+                        </dd>
                         <dd><img class="googleplus" src="/assets//img/googleplus-gray.png" style="width: 12%;">
-                            <img style="display:none;width: 12%;" class="googleplus_hide" src="/assets//img/googleplus.png"></dd>
+                            <img style="display:none;width: 12%;" class="googleplus_hide"
+                                 src="/assets//img/googleplus.png"></dd>
                     </dl>
                 </div>
             </div>
