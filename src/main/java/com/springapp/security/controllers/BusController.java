@@ -33,4 +33,44 @@ public class BusController {
         return busService.mostrarRutas(idS,idL,fecha);
     }
 
+    @RequestMapping(method = RequestMethod.GET,produces = "application/json",value = "/primerlist/{cod_bus}/traer")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseBody
+    public List<Bus> primerBloque(@PathVariable("cod_bus") String cod_bus){
+//        String fecha="19/11/2014";
+        System.out.print("--> "+cod_bus+"-");
+//        System.out.println("aka estas "+busService.mostrarRutas(idS,idL,fecha).size());
+        return busService.primerBloque(cod_bus);
+    }
+
+    @RequestMapping(method = RequestMethod.GET,produces = "application/json",value = "/segundolist/{cod_bus}/traer")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseBody
+    public List<Bus> segundoBloque(@PathVariable("cod_bus") String cod_bus){
+//        String fecha="19/11/2014";
+        System.out.print("--> "+cod_bus+"-");
+//        System.out.println("aka estas "+busService.mostrarRutas(idS,idL,fecha).size());
+        return busService.segundoBloque(cod_bus);
+    }
+
+    @RequestMapping(method = RequestMethod.GET,produces = "application/json",value = "/tercerolist/{cod_bus}/traer")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseBody
+    public List<Bus> tercerBloque(@PathVariable("cod_bus") String cod_bus){
+//        String fecha="19/11/2014";
+        System.out.print("--> "+cod_bus+"-");
+//        System.out.println("aka estas "+busService.mostrarRutas(idS,idL,fecha).size());
+        return busService.tercerBloque(cod_bus);
+    }
+
+    @RequestMapping(method = RequestMethod.GET,produces = "application/json",value = "/cuartolist/{cod_bus}/traer")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseBody
+    public List<Bus> cuartoBloque(@PathVariable("cod_bus") String cod_bus){
+//        String fecha="19/11/2014";
+        System.out.print("--> "+cod_bus+"-");
+//        System.out.println("aka estas "+busService.mostrarRutas(idS,idL,fecha).size());
+        return busService.cuartoBloque(cod_bus);
+    }
+
 }

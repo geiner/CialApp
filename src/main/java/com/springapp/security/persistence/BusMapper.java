@@ -47,4 +47,60 @@ public interface BusMapper {
             @Result(property = "informacion", column = "informacion")
     })
     List<Rutas> MostrarRutas(@Param("salida") int salida,@Param("llegada") int llegada,@Param("fecha") String fecha);
+
+    @Select(value = "SELECT num_aciento, " +
+            "  cod_estado, " +
+            "  cod_aciento " +
+            "FROM tb_aciento " +
+            "WHERE cod_bus   =#{cod_bus} " +
+            "AND num_aciento<=15 order by num_aciento asc")
+    @Results(value = {
+            @Result(javaType = Bus.class),
+            @Result(property = "num_aciento", column = "num_aciento"),
+            @Result(property = "cod_estado", column = "cod_estado"),
+            @Result(property = "cod_aciento", column = "cod_aciento")
+    })
+    List<Bus> primerBloque(@Param("cod_bus")String cod_bus);
+
+    @Select(value = "SELECT num_aciento, " +
+            "  cod_estado, " +
+            "  cod_aciento " +
+            "FROM tb_aciento " +
+            "WHERE cod_bus   =#{cod_bus} " +
+            "AND num_aciento > 15 and num_aciento <=30 order by num_aciento asc")
+    @Results(value = {
+            @Result(javaType = Bus.class),
+            @Result(property = "num_aciento", column = "num_aciento"),
+            @Result(property = "cod_estado", column = "cod_estado"),
+            @Result(property = "cod_aciento", column = "cod_aciento")
+    })
+    List<Bus> segundoBloque(String cod_bus);
+
+    @Select(value = "SELECT num_aciento, " +
+            "  cod_estado, " +
+            "  cod_aciento " +
+            "FROM tb_aciento " +
+            "WHERE cod_bus   =#{cod_bus} " +
+            "AND num_aciento > 30 and num_aciento <=45 order by num_aciento asc")
+    @Results(value = {
+            @Result(javaType = Bus.class),
+            @Result(property = "num_aciento", column = "num_aciento"),
+            @Result(property = "cod_estado", column = "cod_estado"),
+            @Result(property = "cod_aciento", column = "cod_aciento")
+    })
+    List<Bus> tercerBloque(String cod_bus);
+
+    @Select(value = "SELECT num_aciento, " +
+            "  cod_estado, " +
+            "  cod_aciento " +
+            "FROM tb_aciento " +
+            "WHERE cod_bus   =#{cod_bus} " +
+            "AND num_aciento > 45 and num_aciento <=60 order by num_aciento asc")
+    @Results(value = {
+            @Result(javaType = Bus.class),
+            @Result(property = "num_aciento", column = "num_aciento"),
+            @Result(property = "cod_estado", column = "cod_estado"),
+            @Result(property = "cod_aciento", column = "cod_aciento")
+    })
+    List<Bus> cuartoBloque(String cod_bus);
 }

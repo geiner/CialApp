@@ -11,4 +11,11 @@ import java.util.List;
 public interface BusService {
     List<Rutas> mostrarRutas(int salida,int llegada,String fecha);
 
+    List<Bus> primerBloque(String cod_bus);
+
+    List<Bus> segundoBloque(String cod_bus);
+
+    List<Bus> tercerBloque(String cod_bus);
+
+    List<Bus> cuartoBloque(String cod_bus);
 }

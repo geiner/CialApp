@@ -8,7 +8,8 @@
                             <p class="ui left header teal">¿A donde Vamos?</p>
                         </div>
                         <div class="ui eight wide column">
-                            <img class="ui large right image" src="/assets/img/bus.png" id="bus" ng-mouseover="animacion_bus();">
+                            <img class="ui large right image" src="/assets/img/bus.png" id="bus"
+                                 ng-mouseover="animacion_bus();">
                         </div>
                     </div>
                 </div>
@@ -20,7 +21,7 @@
                         <div class="ui fluid selection dropdown">
                             <div class="text">Seleccione</div>
                             <i class="dropdown icon"></i>
-                            <input type="hidden" name="gender"  ng-model="buss.cod_dep_salida" id="origen">
+                            <input type="hidden" name="gender" ng-model="buss.cod_dep_salida" id="origen">
 
                             <div class="menu">
                                 <div class="item" data-value="1">Lima</div>
@@ -73,25 +74,31 @@
             <div class="ui eleven wide column">
                 <table class="ui five column table segment">
                     <thead>
-                    <tr><th>Hora de Salida</th>
+                    <tr>
+                        <th>Hora de Salida</th>
                         <th>Precio S/.</th>
                         <th>Tipo de Servicio</th>
                         <th></th>
                         <th></th>
-                    </tr></thead>
+                    </tr>
+                    </thead>
                     <tbody>
                     <tr ng-repeat="dato in datos">
                         <td>{{dato.fecha}}</td>
                         <td>{{dato.precio}}</td>
                         <td>{{dato.tipo_servicio}}</td>
-                        <td><a href="#/reserva_asiento" data="{{dato.cod_bus}}"><div class="3 fluid purple ui vertical animated tiny button">
-                            <div class="hidden content">COMPRAR</div>
-                            <div class="visible content">
-                                <i class="cart icon"></i>
+                        <td><a href="#/reserva_asiento" data="{{dato.cod_bus}}" ng-click="captura(dato.cod_bus);">
+                            <div class="3 fluid purple ui vertical animated tiny button">
+                                <div class="hidden content">COMPRAR</div>
+                                <div class="visible content">
+                                    <i class="cart icon"></i>
+                                </div>
                             </div>
-                        </div></a></td>
+                            </a>
+                        </td>
                         <td>
-                            <i class="green info circular icon link" data-content="{{dato.informacion}} Asientos 180°,Comida durante viaje con baño"></i> info
+                            <i class="green info circular icon link"
+                               data-content="{{dato.informacion}} Asientos 180°,Comida durante viaje con baño"></i> info
                         </td>
                     </tr>
                     </tbody>

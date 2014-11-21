@@ -9,38 +9,10 @@
                             <div class="ui tertiary purple inverted center aligned segment">
                                 <div class="ui tiny buttons">
                                     <div class="ui vertical buttons">
-                                        <div class="ui black button">1</div>
-                                        <div class="ui button">2</div>
-                                        <div class="ui button">3</div>
-                                        <div class="ui black button">4</div>
-                                        <div class="ui button">5</div>
-                                        <div class="ui button">6</div>
-                                        <div class="ui button">7</div>
-                                        <div class="ui button">8</div>
-                                        <div class="ui button">9</div>
-                                        <div class="ui black button">10</div>
-                                        <div class="ui black button">11</div>
-                                        <div class="ui button">12</div>
-                                        <div class="ui button">13</div>
-                                        <div class="ui black button">14</div>
-                                        <div class="ui button">15</div>
+                                        <div id="{{b1.cod_aciento}}" ng-repeat="b1 in bs1" class="ui {{b1.pintar}} button" data="{{b1.cod_aciento}}" ng-click="almacenar(b1.cod_aciento)">{{b1.num_aciento}}</div>
                                     </div>
                                     <div class="ui vertical buttons">
-                                        <div class="ui button">16</div>
-                                        <div class="ui button">17</div>
-                                        <div class="ui button">18</div>
-                                        <div class="ui button">19</div>
-                                        <div class="ui button">20</div>
-                                        <div class="ui button">21</div>
-                                        <div class="ui black button">22</div>
-                                        <div class="ui black button">23</div>
-                                        <div class="ui button">24</div>
-                                        <div class="ui black button">25</div>
-                                        <div class="ui black button">26</div>
-                                        <div class="ui button">27</div>
-                                        <div class="ui button">28</div>
-                                        <div class="ui button">29</div>
-                                        <div class="ui button">30</div>
+                                        <div id="{{b2.cod_aciento}}" ng-repeat="b2 in bs2" class="ui {{b2.pintar}} button" data="{{b2.cod_aciento}}" ng-click="almacenar(b2.cod_aciento)">{{b2.num_aciento}}</div>
                                     </div>
                                 </div>
                             </div>
@@ -49,38 +21,10 @@
                             <div class="ui tertiary purple inverted center aligned segment">
                                 <div class="ui tiny buttons">
                                     <div class="ui vertical buttons">
-                                        <div class="ui black button">31</div>
-                                        <div class="ui button">32</div>
-                                        <div class="ui purple button">33</div>
-                                        <div class="ui green button">34</div>
-                                        <div class="ui button">35</div>
-                                        <div class="ui button">36</div>
-                                        <div class="ui button">37</div>
-                                        <div class="ui button">38</div>
-                                        <div class="ui button">39</div>
-                                        <div class="ui black button">40</div>
-                                        <div class="ui button">41</div>
-                                        <div class="ui black button">42</div>
-                                        <div class="ui black button">43</div>
-                                        <div class="ui button">44</div>
-                                        <div class="ui button">45</div>
+                                        <div id="{{b3.cod_aciento}}" ng-repeat="b3 in bs3" class="ui {{b3.pintar}} button" data="{{b3.cod_aciento}}" ng-click="almacenar(b3.cod_aciento)">{{b3.num_aciento}}</div>
                                     </div>
                                     <div class="ui vertical buttons">
-                                        <div class="ui purple button">46</div>
-                                        <div class="ui button">47</div>
-                                        <div class="ui black button">48</div>
-                                        <div class="ui green button">49</div>
-                                        <div class="ui button">50</div>
-                                        <div class="ui purple button">51</div>
-                                        <div class="ui button">52</div>
-                                        <div class="ui black button">53</div>
-                                        <div class="ui button">54</div>
-                                        <div class="ui black button">55</div>
-                                        <div class="ui black black button">56</div>
-                                        <div class="ui button">57</div>
-                                        <div class="ui button">58</div>
-                                        <div class="ui black button">59</div>
-                                        <div class="ui button">60</div>
+                                        <div id="{{b4.cod_aciento}}" ng-repeat="b4 in bs4" class="ui {{b4.pintar}} button" data="{{b4.cod_aciento}}" ng-click="almacenar(b4.cod_aciento)">{{b4.num_aciento}}</div>
                                     </div>
                                 </div>
                             </div>
@@ -121,8 +65,8 @@
                                             <th>Precio S/.</th>
                                             <th>Eliminar Asiento</th>
                                         </tr></thead>
-                                        <tbody>
-                                        <tr>
+                                        <tbody id="seleccion">
+                                        <!--<tr>
                                             <td><div class="ui green button">34</div></td>
                                             <td>120.00</td>
                                             <td><div class="3 fluid red ui vertical animated tiny button" ng-click="EliminarAciento()">
@@ -141,7 +85,7 @@
                                                     <i class="trash icon"></i>
                                                 </div>
                                             </div></td>
-                                        </tr>
+                                        </tr>-->
                                         </tbody>
                                     </table>
                                 </div>

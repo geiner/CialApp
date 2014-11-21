@@ -8,7 +8,43 @@ public class Bus {
     private String cod_tipo;
     private int cod_dep_salida;
     private int cod_dep_llegada;
+    private int num_aciento;
+    private int cod_estado;
+    private String pintar;
+    private int cod_aciento;
     private String fecha;
+
+    public int getNum_aciento() {
+        return num_aciento;
+    }
+
+    public void setNum_aciento(int num_aciento) {
+        this.num_aciento = num_aciento;
+    }
+
+    public int getCod_estado() {
+        return cod_estado;
+    }
+
+    public void setCod_estado(int cod_estado) {
+        this.cod_estado = cod_estado;
+    }
+
+    public String getPintar() {
+        return pintar;
+    }
+
+    public void setPintar(String pintar) {
+        this.pintar = pintar;
+    }
+
+    public int getCod_aciento() {
+        return cod_aciento;
+    }
+
+    public void setCod_aciento(int cod_aciento) {
+        this.cod_aciento = cod_aciento;
+    }
 
     public String getCod_bus() {
         return cod_bus;

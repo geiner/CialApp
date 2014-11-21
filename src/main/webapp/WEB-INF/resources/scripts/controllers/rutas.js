@@ -46,5 +46,11 @@ define(['angular'], function (angular) {
             ;
             //$.vegas('destroy');
         };
+        $scope.captura=function(cod_bus){
+//            var clickedElement=$(ev.currentTarget);
+            $('#codi_bus').text(cod_bus)
+//            alert(cod_bus);
+//            alert($(this).parent().parent().attr('data'));
+        }
     })
 });
